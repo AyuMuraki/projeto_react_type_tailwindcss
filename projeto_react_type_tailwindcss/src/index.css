@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados mínimos */
+@layer components {
+  /* Estilos para a tabela */
+  .table-custom {
+    @apply w-full border-collapse my-4 bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .table-custom th {
+    @apply bg-gray-800 text-white p-3 text-left border-b;
+  }
+
+  .table-custom td {
+    @apply p-3 border-b;
+  }
+
+  .table-custom tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+
+  .table-custom tr:hover {
+    @apply bg-gray-100;
+  }
+
+  /* Estilos para formulários */
+  .form-group {
+    @apply flex flex-col w-full mb-4;
+  }
+
+  .form-input {
+    @apply w-full p-2 border border-gray-300 rounded-md focus:border-blue-500 
+           focus:ring-1 focus:ring-blue-500 transition-all;
+  }
+
+  /* Botões personalizados */
+  .btn {
+    @apply px-4 py-2 rounded font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-300 text-gray-700 hover:bg-gray-400;
+  }
+}
+
+/* Animação personalizada (opcional) */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
